@@ -11,5 +11,6 @@ router.post('/createorder',bookController.createOrder)
 router.post('/getordersbycustomerid',bookController.getOrderDetailsByCustomerID);
 router.get('/gettodayssale',bookController.getTodaysSale);
 router.get('/getlast7dayssales',bookController.getLast7DaysSales)
+router.post('/updateorderstatus',bookController.updateOrderStatus);
 
 module.exports= router;

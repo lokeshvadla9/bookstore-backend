@@ -27,8 +27,8 @@ exports.getAllOrders = async(req,res) =>{
 
 exports.updateOrderStatus = async (req, res) => {
   try {
-    const { orderId, newStatus } = req.body;
-    const result = await bookModel.updateOrderStatus(orderId, newStatus);
+    const { order_id, order_status } = req.body;
+    const result = await bookModel.updateOrderStatus(order_id, order_status);
     res.json(result);
   } catch (error) {
     console.error('Error occurred:', error);

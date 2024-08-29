@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const userRoutes = require('./routes/userRoutes');
 const bookRoutes=require('./routes/bookRoutes');
+require('dotenv').config();
 
 const app = express();
 
@@ -19,6 +20,7 @@ app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ status: 'error', message: 'Internal server error' });
 });
+
 
 const port = process.env.PORT || 4000;
 app.listen(port, () => {
